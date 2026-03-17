@@ -79,7 +79,7 @@ const Hero = () => {
 
         {/* Solid Text - Front (Z: 3) */}
         <motion.h1
-          className="relative z-30 text-[clamp(1.5rem,5.5vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-nowrap leading-[0.9] tracking-[-0.04em] animate-shimmer"
+          className="relative z-30 text-[clamp(1.2rem,6vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -101,11 +101,11 @@ const Hero = () => {
 
       <div
         className={`absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-none ${interTight.className}`}
-        style={{ marginTop: 'clamp(1.5rem, 6vw, 10.5rem)' }}
+        style={{ marginTop: 'clamp(1rem, 5vw, 10.5rem)' }}
       >
         {/* Outline Text - Back (Z: 1) */}
         <motion.h2
-          className="relative z-10 text-[clamp(1.5rem,5.5vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-nowrap leading-[0.9] tracking-[-0.04em] animate-shimmer"
+          className="relative z-10 text-[clamp(1.2rem,6vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -166,9 +166,9 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* 5. The Buttons Container (Z-Index: 10) */}
+      {/* 5. The Buttons Container (Z-Index: 60) */}
       <motion.div
-        className="absolute bottom-[2%] md:bottom-[5%] left-[5%] z-40 flex flex-col gap-[10px] md:gap-[15px] items-start pointer-events-auto"
+        className="absolute bottom-[4%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[5%] md:bottom-[5%] z-[60] flex flex-col sm:flex-row md:flex-col gap-[10px] md:gap-[15px] items-center md:items-start pointer-events-auto"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
@@ -177,7 +177,11 @@ const Hero = () => {
         <MagneticButton
           onMouseEnter={() => setHoveredBtn("swe")}
           onMouseLeave={() => setHoveredBtn(null)}
-          className="px-4 py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 bg-white text-black font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg shadow-[0_4px_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
+          onClick={() => {
+            const el = document.getElementById('skills');
+            if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+          }}
+          className="px-6 py-3 bg-white text-black font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg shadow-[0_4px_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
         >
           You need a software engineer
         </MagneticButton>
@@ -186,7 +190,11 @@ const Hero = () => {
         <MagneticButton
           onMouseEnter={() => setHoveredBtn("ai")}
           onMouseLeave={() => setHoveredBtn(null)}
-          className="px-4 py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 bg-transparent border border-white text-white font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg backdrop-blur-[5px] hover:bg-white/10 transition-colors duration-300"
+          onClick={() => {
+            const el = document.getElementById('projects');
+            if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+          }}
+          className="px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg backdrop-blur-[5px] hover:bg-white/10 transition-colors duration-300"
         >
           You need an AI expert
         </MagneticButton>
@@ -200,10 +208,11 @@ interface MagneticButtonProps {
   className?: string;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
 // Reusable Magnetic Button Component
-const MagneticButton = ({ children, className, onMouseEnter, onMouseLeave }: MagneticButtonProps) => {
+const MagneticButton = ({ children, className, onMouseEnter, onMouseLeave, onClick }: MagneticButtonProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -227,6 +236,7 @@ const MagneticButton = ({ children, className, onMouseEnter, onMouseLeave }: Mag
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       onMouseEnter={onMouseEnter}
+      onClick={onClick}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className="cursor-pointer"

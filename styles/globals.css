@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+ * The following @apply warnings in your IDE are standard for Tailwind project CSS files
+ * and do not affect the build or functionality.
+ */
+
 @layer base {
   * {
     @apply border-dark-blue-grey dark:border-white/5;
@@ -104,7 +109,7 @@ html {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #4588d4 0%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #00f0ff 0%, #8B5CF6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

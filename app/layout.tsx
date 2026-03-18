@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mubasshir Ahmed Arnab | Software Developer & ML Engineer",
     description: "Explore the portfolio of Mubasshir Ahmed Arnab, specializing in Full Stack Web Development and Machine Learning. Let's build together!",
-    url: "https://mubasshir-arnab-portfolio.vercel.app",
+    url: "https://mubasshirahmed.vercel.app",
     type: "website",
     locale: "en_US",
   },
@@ -42,20 +42,20 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://mubasshir-arnab-portfolio.vercel.app/#website",
-      "url": "https://mubasshir-arnab-portfolio.vercel.app/",
+      "@id": "https://mubasshirahmed.vercel.app/#website",
+      "url": "https://mubasshirahmed.vercel.app/",
       "name": "Mubasshir Ahmed Arnab Portfolio",
       "description": "Portfolio of a Full Stack Developer and Machine Learning Engineer",
       "publisher": {
-        "@id": "https://mubasshir-arnab-portfolio.vercel.app/#person"
+        "@id": "https://mubasshirahmed.vercel.app/#person"
       }
     },
     {
       "@type": "Person",
-      "@id": "https://mubasshir-arnab-portfolio.vercel.app/#person",
+      "@id": "https://mubasshirahmed.vercel.app/#person",
       "name": "Mubasshir Ahmed Arnab",
       "jobTitle": "Full Stack Software Developer & Machine Learning Engineer",
-      "url": "https://mubasshir-arnab-portfolio.vercel.app/",
+      "url": "https://mubasshirahmed.vercel.app/",
       "sameAs": [
         "https://github.com/mubasshirarnab",
         "https://www.linkedin.com/in/mubasshir-ahmed263/",

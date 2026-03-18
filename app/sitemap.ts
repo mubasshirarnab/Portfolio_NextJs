@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mubasshirarnab.vercel.app"; // Defaulting to vercel app url format or personal domain
+  const baseUrl = "https://mubasshirahmed.vercel.app"; // Defaulting to vercel app url format or personal domain
 
   return [
     {

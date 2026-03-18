@@ -172,7 +172,7 @@ const Education = () => {
       degree: "BSc in Computer Science & Engineering",
       institution: "United International University",
       location: "Dhaka, Bangladesh",
-      duration: "2021 – Present",
+      duration: "2022 – Present",
       description: "Focusing on advanced algorithms, scalable software architecture, and artificial intelligence. Active participant in undergraduate research and coding competitions.",
       icon: FaUniversity
     },

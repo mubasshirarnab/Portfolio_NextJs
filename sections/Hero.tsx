@@ -79,7 +79,7 @@ const Hero = () => {
 
         {/* Solid Text - Front (Z: 3) */}
         <motion.h1
-          className="relative z-30 text-[clamp(1.2rem,6vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
+          className="relative z-30 text-[clamp(1.2rem,9vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -100,12 +100,12 @@ const Hero = () => {
       </div>
 
       <div
-        className={`absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-none ${interTight.className}`}
+        className={`absolute top-[37%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-none ${interTight.className}`}
         style={{ marginTop: 'clamp(1rem, 5vw, 10.5rem)' }}
       >
         {/* Outline Text - Back (Z: 1) */}
         <motion.h2
-          className="relative z-10 text-[clamp(1.2rem,6vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
+          className="relative z-10 text-[clamp(1.2rem,9vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -126,7 +126,7 @@ const Hero = () => {
 
       {/* 4. The Profile Image Outline (Z-Index: 2) */}
       <motion.div
-        className="absolute bottom-0 left-1/2 z-20 h-[65vh] md:h-[75vh] aspect-[3/4] origin-bottom pointer-events-auto"
+        className="absolute bottom-0 left-1/2 z-20 h-[65vh] md:h-[68vh] aspect-[3/4] origin-bottom pointer-events-auto"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -181,7 +181,7 @@ const Hero = () => {
             const el = document.getElementById('skills');
             if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
           }}
-          className="px-6 py-3 bg-white text-black font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg shadow-[0_4px_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
+          className="px-4 py-2 bg-white text-black font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg shadow-[0_4px_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-shadow duration-300"
         >
           You need a software engineer
         </MagneticButton>
@@ -194,7 +194,7 @@ const Hero = () => {
             const el = document.getElementById('projects');
             if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
           }}
-          className="px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg backdrop-blur-[5px] hover:bg-white/10 transition-colors duration-300"
+          className="px-4 py-2 bg-transparent border border-white text-white font-semibold rounded-[8px] text-xs sm:text-sm md:text-lg backdrop-blur-[5px] hover:bg-white/10 transition-colors duration-300"
         >
           You need an AI expert
         </MagneticButton>

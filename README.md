@@ -104,4 +104,4 @@ This project is licensed under the **MIT License**. Created with ❤️ by **Arn
 
 ---
 
-**[Portfolio Live Demo](https://mubasshirarnab.github.io/)** — *Exploration Recommended.*
+**[Portfolio Live Demo](https://mubasshirahmed.vercel.app/)** — *Exploration Recommended.*

@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     creator: "@ArnabMahdee",
     site: "@ArnabMahdee",
   },
+  verification: {
+    google: "xK8QaLUsP8YGOI-rb60Ijqavil6iWTo42j4mUXAEANw",
+  },
 };
 
 const jsonLd = {

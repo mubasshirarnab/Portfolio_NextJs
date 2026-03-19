@@ -89,13 +89,6 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light tracking-wide text-light-grey/50">
           <p>© {currentYear} Mubasshir Ahmed Arnab. All rights reserved.</p>
 
-          <div className="flex items-center gap-2">
-            <span>Powered by</span>
-            <span className="text-bright-aqua font-medium">Next.js</span>
-            <span className="text-white/20">|</span>
-            <span className="text-neon-purple font-medium">Framer Motion</span>
-          </div>
-
           <a href="#home" className="hover:text-bright-aqua transition-colors flex items-center gap-1">
             Return to Nexus <span className="text-lg leading-none">↑</span>
           </a>

@@ -10,11 +10,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative py-32 overflow-hidden bg-gray-50 dark:bg-dark-black transition-colors duration-500"
+      className="relative py-20 md:py-32 overflow-hidden bg-gray-50 dark:bg-dark-black transition-colors duration-500"
     >
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         <Reveal>
-          <div className="flex flex-col mb-16">
+          <div className="flex flex-col mb-8 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-2">
               Who I <span className="text-bright-aqua">Am</span>
             </h2>
@@ -22,14 +22,14 @@ const About = () => {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px] md:auto-rows-[160px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 md:auto-rows-[160px]">
           {/* Profile Card - Col 1, Row 1-2 */}
           <TiltCard
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="md:col-span-1 row-span-2 relative rounded-[32px] overflow-hidden bg-dark-surface border border-slate-200 dark:border-white/10"
+            className="col-span-1 md:col-span-1 md:row-span-2 relative rounded-[24px] md:rounded-[32px] overflow-hidden bg-dark-surface border border-slate-200 dark:border-white/10 min-h-[280px] md:min-h-0"
           >
             <motion.div 
               className="absolute inset-0 z-10 bg-gradient-to-t from-dark-black/90 via-dark-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-70 pointer-events-none"
@@ -55,7 +55,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:col-span-2 row-span-1 rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-8 flex flex-col justify-center relative overflow-hidden"
+            className="col-span-1 md:col-span-2 md:row-span-1 rounded-[24px] md:rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-6 md:p-8 flex flex-col justify-center relative overflow-hidden"
           >
             {/* Spotlight Hover Effect */}
             <div className="absolute -inset-full w-[300%] h-[300%] bg-gradient-to-tr from-neon-purple/20 to-bright-aqua/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rotate-12 blur-[80px] pointer-events-none" />
@@ -83,7 +83,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="md:col-span-1 row-span-1 rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden"
+            className="col-span-1 md:col-span-1 md:row-span-1 rounded-[24px] md:rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-6 md:p-8 flex flex-col items-center justify-center text-center relative overflow-hidden"
           >
             {/* Floating Pulse Rings */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-500/10 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse-slow pointer-events-none" />
@@ -115,7 +115,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="md:col-span-1 row-span-2 rounded-[32px] bg-slate-900 dark:bg-dark-surface border border-slate-200 dark:border-white/5 p-8 flex flex-col transition-colors relative overflow-hidden"
+            className="col-span-1 md:col-span-1 md:row-span-2 rounded-[24px] md:rounded-[32px] bg-slate-900 dark:bg-dark-surface border border-slate-200 dark:border-white/5 p-6 md:p-8 flex flex-col transition-colors relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-48 h-48 bg-bright-aqua/10 blur-[60px] rounded-full group-hover:bg-bright-aqua/30 transition-colors duration-500 pointer-events-none" />
             
@@ -148,7 +148,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
-            className="md:col-span-2 row-span-1 rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-8 flex items-center gap-6 relative overflow-hidden"
+            className="col-span-1 md:col-span-2 md:row-span-1 rounded-[24px] md:rounded-[32px] bg-white dark:bg-[#0f0f11] border border-slate-200 dark:border-white/5 p-6 md:p-8 flex items-center gap-6 relative overflow-hidden"
           >
             {/* Animated Shine Border Effect */}
             <div className="absolute inset-0 w-full h-full border-2 border-transparent group-hover:border-bright-aqua/50 rounded-[32px] transition-colors duration-500 group-hover:shadow-[inset_0_0_20px_rgba(0,240,255,0.15)] pointer-events-none" />

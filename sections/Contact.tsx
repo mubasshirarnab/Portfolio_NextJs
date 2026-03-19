@@ -23,9 +23,9 @@ const Contact = () => {
   };
 
   return (
-    <ScrollSection id="contact" className="py-32 relative bg-dark-black z-10 border-t border-white/5">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col items-center mb-20">
+    <ScrollSection id="contact" className="py-20 md:py-32 relative bg-dark-black z-10 border-t border-white/5">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
+        <div className="flex flex-col items-center mb-10 md:mb-20">
           <Reveal>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-4 text-center">
               Initiate <span className="gradient-text">Connection</span>
@@ -57,7 +57,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="text-xs text-light-grey/50 uppercase tracking-widest font-display">Email</p>
-                      <p className="text-white font-medium group-hover:text-bright-aqua transition-colors">marnab222263@bscse.uiu.ac.bd</p>
+                      <p className="text-white font-medium group-hover:text-bright-aqua transition-colors text-sm md:text-base break-all">marnab222263@bscse.uiu.ac.bd</p>
                     </div>
                   </a>
                   

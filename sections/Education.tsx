@@ -63,7 +63,7 @@ const HolographicCard = ({ item, index }: { item: any; index: number }) => {
         }`}
     >
       {/* Timeline Dot & Icon */}
-      <div className="absolute left-[24px] md:left-1/2 w-16 h-16 rounded-full bg-[#0a0a0c] border border-white/10 -translate-x-1/2 md:-translate-x-1/2 flex items-center justify-center z-20 transition-all duration-500 cursor-default group-hover/card:border-bright-aqua/80 group-hover/card:shadow-[0_0_30px_rgba(45,212,191,0.6)] group-hover/card:scale-110 overflow-hidden mt-8 md:mt-0">
+      <div className="absolute left-[24px] md:left-1/2 w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0a0a0c] border border-white/10 -translate-x-1/2 md:-translate-x-1/2 flex items-center justify-center z-20 transition-all duration-500 cursor-default group-hover/card:border-bright-aqua/80 group-hover/card:shadow-[0_0_30px_rgba(45,212,191,0.6)] group-hover/card:scale-110 overflow-hidden mt-6 md:mt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-bright-aqua/20 to-neon-purple/20 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
         <Icon className="text-2xl text-light-grey/60 group-hover/card:text-white transition-colors duration-300 relative z-10" />
@@ -76,7 +76,7 @@ const HolographicCard = ({ item, index }: { item: any; index: number }) => {
       <div className="hidden md:block w-[42%]" />
 
       {/* Futuristic Holographic Card */}
-      <div className="w-full md:w-[45%] pl-20 md:pl-0 mt-8 md:mt-0 perspective-[1000px]">
+      <div className="w-full md:w-[45%] pl-14 md:pl-0 mt-4 md:mt-0 perspective-[1000px]">
         <motion.div
           ref={ref}
           onMouseMove={handleMouseMove}
@@ -197,12 +197,12 @@ const Education = () => {
   ];
 
   return (
-    <ScrollSection id="education" className="py-32 relative bg-[#0f0f11] z-10 border-t border-white/5 overflow-hidden">
+    <ScrollSection id="education" className="py-20 md:py-32 relative bg-[#0f0f11] z-10 border-t border-white/5 overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-bright-aqua/5 blur-[150px] rounded-full mix-blend-screen pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 max-w-6xl" ref={containerRef}>
-        <div className="flex flex-col items-center mb-28">
+        <div className="flex flex-col items-center mb-12 md:mb-28">
           <Reveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 tracking-tight">
               Academic <span className="text-bright-aqua drop-shadow-[0_0_15px_rgba(45,212,191,0.4)]">Journey</span>
@@ -224,7 +224,7 @@ const Education = () => {
             />
           </div>
 
-          <div className="space-y-16 md:space-y-32">
+          <div className="space-y-10 md:space-y-16 lg:space-y-32">
             {educationData.map((item, index) => (
               <HolographicCard key={index} item={item} index={index} />
             ))}

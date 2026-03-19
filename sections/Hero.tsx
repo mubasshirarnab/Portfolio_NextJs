@@ -70,23 +70,23 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute top-[14%] z-20 text-center w-full px-4"
+        className="absolute top-[10%] sm:top-[14%] z-20 text-center w-full px-6"
       >
-        <p className="text-base sm:text-[1.1rem] md:text-[1.2rem] text-[#A0A0A0] font-normal tracking-wide">
+        <p className="text-sm sm:text-[1.1rem] md:text-[1.2rem] text-[#A0A0A0] font-normal tracking-wide">
           👋 My name is <strong className="text-white">Mubasshir Ahmed</strong> and I am a ML Engineer.
         </p>
       </motion.div>
 
       {/* 3. The Massive Typography Layering (Z-Index Sandwich) */}
       <div
-        className={`absolute top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-auto ${interTight.className}`}
+        className={`absolute top-[28%] sm:top-[32%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-auto ${interTight.className}`}
         onMouseEnter={() => setIsTextHovered(true)}
         onMouseLeave={() => setIsTextHovered(false)}
       >
 
         {/* Solid Text - Front (Z: 3) */}
         <motion.h1
-          className="relative z-30 text-[clamp(1.2rem,9vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
+          className="relative z-30 text-[clamp(1.8rem,9vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-2"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -107,12 +107,12 @@ const Hero = () => {
       </div>
 
       <div
-        className={`absolute top-[37%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-none ${interTight.className}`}
+        className={`absolute top-[33%] sm:top-[37%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full pointer-events-none ${interTight.className}`}
         style={{ marginTop: 'clamp(1rem, 5vw, 10.5rem)' }}
       >
         {/* Outline Text - Back (Z: 1) */}
         <motion.h2
-          className="relative z-10 text-[clamp(1.2rem,9vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-normal sm:whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-4"
+          className="relative z-10 text-[clamp(1.8rem,10.5vw,12rem)] sm:text-[clamp(2.5rem,7vw,12rem)] md:text-[clamp(4rem,9vw,12rem)] font-black uppercase whitespace-nowrap text-center leading-[0.9] tracking-[-0.04em] animate-shimmer px-2"
           style={{
             backgroundImage: isTextHovered
               ? "linear-gradient(90deg, #00f0ff, #8B5CF6, #00f0ff)"
@@ -175,7 +175,7 @@ const Hero = () => {
 
       {/* 5. The Buttons Container (Z-Index: 60) */}
       <motion.div
-        className="absolute bottom-[4%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[5%] md:bottom-[5%] z-[60] flex flex-col sm:flex-row md:flex-col gap-[10px] md:gap-[15px] items-center md:items-start pointer-events-auto"
+        className="absolute bottom-[3%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[5%] md:bottom-[5%] z-[60] flex flex-row md:flex-col gap-[8px] md:gap-[15px] items-center md:items-start pointer-events-auto"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}

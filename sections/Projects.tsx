@@ -67,7 +67,7 @@ const Projects = () => {
   const currentProject = projectsData.find(p => p.id === activeProject) || projectsData[0];
 
   return (
-    <ScrollSection id="projects" className="relative py-32 bg-gray-50 dark:bg-dark-black transition-colors duration-500 border-t border-slate-200 dark:border-white/5">
+    <ScrollSection id="projects" className="relative py-20 md:py-32 bg-gray-50 dark:bg-dark-black transition-colors duration-500 border-t border-slate-200 dark:border-white/5">
 
       {/* Dynamic ambient backdrop bound to active project color */}
       <div
@@ -76,7 +76,7 @@ const Projects = () => {
       />
 
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
-        <div className="flex flex-col items-center text-center justify-center mb-16 md:mb-24 w-full">
+        <div className="flex flex-col items-center text-center justify-center mb-10 md:mb-24 w-full">
           <Reveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-slate-900 dark:text-white tracking-tight mb-4 inline-block text-center w-full">
               Featured <span className="gradient-text">Deployments</span>
@@ -98,7 +98,7 @@ const Projects = () => {
               <button
                 key={project.id}
                 onClick={() => setActiveProject(project.id)}
-                className={`group relative text-left p-6 rounded-2xl transition-all duration-500 overflow-hidden ${activeProject === project.id
+                className={`group relative text-left p-4 md:p-6 rounded-2xl transition-all duration-500 overflow-hidden ${activeProject === project.id
                     ? "bg-white dark:bg-dark-surface shadow-[0_8px_30px_rgba(0,0,0,0.1)] dark:shadow-none border border-slate-200 dark:border-white/10"
                     : "bg-transparent border border-transparent hover:border-slate-200 hover:bg-white/50 dark:hover:border-white/5 dark:hover:bg-white/5"
                   }`}

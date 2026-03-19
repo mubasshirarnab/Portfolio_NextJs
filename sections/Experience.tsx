@@ -48,14 +48,14 @@ const Experience = () => {
   ];
 
   return (
-    <ScrollSection id="experience" className="py-32 relative bg-dark-black z-10 border-t border-white/5 overflow-hidden">
+    <ScrollSection id="experience" className="py-20 md:py-32 relative bg-dark-black z-10 border-t border-white/5 overflow-hidden">
       
       {/* Background Lighting */}
       <div className="absolute top-1/2 left-0 w-full h-[500px] bg-gradient-to-r from-bright-aqua/5 via-neon-purple/5 to-transparent blur-[150px] pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10" ref={containerRef}>
         
-        <div className="flex flex-col items-center mb-24 text-center">
+        <div className="flex flex-col items-center mb-12 md:mb-24 text-center">
           <Reveal>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-2 tracking-tight">
               Professional <span className="gradient-text">Experiences</span>
@@ -97,7 +97,7 @@ const Experience = () => {
             </svg>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-10 md:space-y-16">
             {experienceData.map((item, index) => (
               <motion.div
                 key={index}
@@ -105,10 +105,10 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="relative pl-16 md:pl-28 pr-4"
+                className="relative pl-14 md:pl-28 pr-2 md:pr-4"
               >
                 {/* Node Icon */}
-                <div className="absolute left-0 md:left-4 top-0 w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-dark-black border border-white/10 flex items-center justify-center z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden group">
+                <div className="absolute left-0 md:left-4 top-0 w-12 h-12 md:w-20 md:h-20 rounded-2xl bg-dark-black border border-white/10 flex items-center justify-center z-10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] overflow-hidden group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-10 group-hover:opacity-30 transition-opacity duration-500`} />
                   <div className="relative z-10 text-white/80 group-hover:text-white transition-colors duration-300 group-hover:scale-110">
                     {item.role === "Project Lead" ? <Crown className="w-6 h-6 md:w-8 md:h-8 drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]" /> : item.icon}

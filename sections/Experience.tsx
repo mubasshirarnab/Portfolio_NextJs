@@ -117,35 +117,35 @@ const Experience = () => {
 
                 {/* Content Card wrapped in GlowingShadow */}
                 <GlowingShadow className="w-full">
-                  <div className="glass-panel w-full p-8 md:p-10 rounded-[18px] transition-all duration-500 group relative overflow-hidden text-left bg-dark-surface">
+                  <div className="glass-panel w-full p-6 md:p-8 rounded-[18px] transition-all duration-500 group relative overflow-hidden text-left bg-dark-surface">
                     {/* Subtle hover glow inside card */}
                     <div className={`absolute -inset-2 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none`} />
                     
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                       <div>
-                        <h3 className="text-2xl md:text-3xl font-display font-bold text-white tracking-tight mb-2">
+                        <h3 className="text-xl md:text-2xl font-display font-bold text-white tracking-tight mb-1">
                           {item.role}
                         </h3>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-2">
                           <Briefcase className="w-4 h-4 text-neon-purple" />
-                          <span className="text-lg text-light-grey/90 font-medium">{item.organization}</span>
+                          <span className="text-base text-light-grey/90 font-medium">{item.organization}</span>
                         </div>
                       </div>
                       
-                      <div className="shrink-0 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-bright-aqua/90 text-sm tracking-widest font-display uppercase self-start md:self-auto shadow-inner">
+                      <div className="shrink-0 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-bright-aqua/90 text-xs tracking-widest font-display uppercase self-start md:self-auto shadow-inner">
                         {item.duration}
                       </div>
                     </div>
 
-                    <p className="text-light-grey/70 font-light leading-relaxed mb-8 text-base md:text-lg">
+                    <p className="text-light-grey/70 font-light leading-relaxed mb-6 text-sm md:text-base">
                       {item.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-3 border-t border-white/5 pt-6 mt-6">
+                    <div className="flex flex-wrap gap-2 border-t border-white/5 pt-4 mt-4">
                       {item.highlights.map((highlight, i) => (
                         <span
                           key={i}
-                          className="px-4 py-1.5 bg-dark-black border border-white/5 rounded-lg text-light-grey/60 text-sm font-light hover:text-bright-aqua hover:border-bright-aqua/30 transition-colors"
+                          className="px-3 py-1 bg-dark-black border border-white/5 rounded-lg text-light-grey/60 text-xs font-light hover:text-bright-aqua hover:border-bright-aqua/30 transition-colors"
                         >
                           {highlight}
                         </span>

@@ -58,6 +58,13 @@ const Hero = () => {
       ref={containerRef}
       className={`relative min-h-[100vh] w-full flex flex-col items-center justify-center overflow-hidden bg-[#0f0f11] font-sans transition-colors duration-500`}
     >
+      {/* SEO hidden block for robust Google indexing */}
+      <div className="sr-only">
+        <h1>Mubasshir Ahmed Arnab</h1>
+        <p>Full Stack Software Developer & Machine Learning Engineer</p>
+        {/* Using standard img for fastest GoogleBot pickup */}
+        <img src="/mubasshir_ahmed.jpg" alt="Mubasshir Ahmed Arnab - Full Stack Developer and Machine Learning Engineer Portrait" />
+      </div>
       {/* 2. Intro Text */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

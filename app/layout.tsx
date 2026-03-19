@@ -14,23 +14,33 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mubasshirahmed.vercel.app"),
   title: "Mubasshir Ahmed Arnab | ML Engineer & Software Developer",
-  description: "Explore the portfolio of Mubasshir Ahmed Arnab, a Full Stack Developer & ML Engineer studying Computer Science at United International University.",
-  keywords: ["Mubasshir Ahmed Arnab Portfolio", "Full Stack Software Developer", "Machine Learning Engineer", "React", "Next.js", "Python", "Web Developer"],
+  description: "Explore the portfolio of Mubasshir Ahmed Arnab, an expert Full Stack Developer & Machine Learning Engineer studying Computer Science at United International University.",
+  keywords: ["Mubasshir Ahmed Arnab", "Full Stack Software Developer", "Machine Learning Engineer", "React", "Next.js", "Python", "Web Developer", "UIU"],
   authors: [{ name: "Mubasshir Ahmed Arnab" }],
   openGraph: {
     title: "Mubasshir Ahmed Arnab | Software Developer & ML Engineer",
-    description: "Explore the portfolio of Mubasshir Ahmed Arnab, a Full Stack Developer & ML Engineer studying Computer Science at United International University.",
+    description: "Explore the portfolio of Mubasshir Ahmed Arnab, an expert Full Stack Developer & Machine Learning Engineer.",
     url: "https://mubasshirahmed.vercel.app",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/mubasshir_ahmed.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Mubasshir Ahmed Arnab - Software Developer & ML Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mubasshir Ahmed Arnab | Software Developer & ML Engineer",
-    description: "Explore the portfolio of Mubasshir Ahmed Arnab, a Full Stack Developer & ML Engineer studying CS at United International University.",
+    description: "Explore the portfolio of Mubasshir Ahmed Arnab, an expert Full Stack Developer & Machine Learning Engineer.",
     creator: "@ArnabMahdee",
     site: "@ArnabMahdee",
+    images: ["/mubasshir_ahmed.jpg"],
   },
   verification: {
     google: "xK8QaLUsP8YGOI-rb60Ijqavil6iWTo42j4mUXAEANw",
@@ -54,7 +64,10 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://mubasshirahmed.vercel.app/#person",
       "name": "Mubasshir Ahmed Arnab",
+      "alternateName": ["Mubasshir Ahmed", "Arnab"],
+      "image": "https://mubasshirahmed.vercel.app/mubasshir_ahmed.jpg",
       "jobTitle": "Full Stack Software Developer & Machine Learning Engineer",
+      "description": "Mubasshir Ahmed Arnab is a highly skilled Full Stack Software Developer and Machine Learning Engineer currently studying Computer Science and Engineering at United International University (UIU). Specializing in React.js, Next.js, Node.js, Python, and TensorFlow, he builds intelligent, scalable web applications and AI-driven solutions.",
       "url": "https://mubasshirahmed.vercel.app/",
       "sameAs": [
         "https://github.com/mubasshirarnab",
@@ -71,7 +84,9 @@ const jsonLd = {
         "Node.js",
         "Python",
         "Machine Learning",
-        "TensorFlow"
+        "TensorFlow",
+        "Artificial Intelligence",
+        "System Architecture"
       ]
     }
   ]

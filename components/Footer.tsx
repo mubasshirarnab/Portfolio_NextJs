@@ -9,16 +9,16 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-dark-black border-t border-white/5 pt-20 overflow-hidden z-10">
-      
+
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-64 bg-bright-aqua/5 blur-[120px] pointer-events-none rounded-t-full" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-white/10 pb-12 mb-8">
-          
+
           {/* Brand & Mission */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -31,7 +31,7 @@ const Footer = () => {
                 Arnab<span className="text-bright-aqua">.</span>
               </h3>
             </motion.div>
-            
+
             <p className="text-light-grey/60 font-light leading-relaxed mb-8 max-w-sm">
               Engineering cinematic digital experiences through advanced AI integration and robust full-stack architectures.
             </p>
@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="flex gap-4">
               {[
                 { icon: Github, href: "https://github.com/mubasshirarnab" },
-                { icon: Linkedin, href: "https://linkedin.com/in/mubasshir-ahmed-arnab" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/mubasshir-ahmed263/" },
                 { icon: Mail, href: "mailto:marnab222263@bscse.uiu.ac.bd" }
               ].map((social, i) => (
                 <a
@@ -60,8 +60,8 @@ const Footer = () => {
             <h4 className="text-sm font-display font-semibold uppercase tracking-widest text-white mb-6">Directory</h4>
             <div className="flex flex-col gap-3">
               {['Home', 'About', 'Projects', 'Skills', 'Education'].map((item) => (
-                <a 
-                  key={item} 
+                <a
+                  key={item}
                   href={`#${item.toLowerCase()}`}
                   className="text-light-grey/60 hover:text-bright-aqua text-sm font-light transition-colors inline-block w-fit"
                 >
@@ -88,7 +88,7 @@ const Footer = () => {
         {/* Copyright & Credits */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light tracking-wide text-light-grey/50">
           <p>© {currentYear} Mubasshir Ahmed Arnab. All rights reserved.</p>
-          
+
           <div className="flex items-center gap-2">
             <span>Powered by</span>
             <span className="text-bright-aqua font-medium">Next.js</span>

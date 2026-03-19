@@ -24,7 +24,7 @@ const Navbar = () => {
     setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
+
       const sections = document.querySelectorAll("section[id]");
       let current = "";
       sections.forEach((section) => {
@@ -79,14 +79,13 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${
-          scrolled ? "py-4 bg-[#0a0a0a]/80 backdrop-blur-xl shadow-sm border-b border-gray-800" : "py-6 bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${scrolled ? "py-4 bg-[#0a0a0a]/80 backdrop-blur-xl shadow-sm border-b border-gray-800" : "py-6 bg-transparent"
+          }`}
       >
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
-          
+
           {/* Logo */}
-          <div 
+          <div
             className="flex items-center cursor-pointer group"
             onClick={() => handleNavClick("home")}
           >
@@ -103,24 +102,25 @@ const Navbar = () => {
             {navLinks.map((item) => {
               const Icon = item.icon;
               return (
-              <button
-                key={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className="relative text-sm font-medium transition-colors duration-300 group flex items-center gap-2"
-              >
-                <Icon className={`relative z-10 w-4 h-4 transition-colors duration-300 ${activeSection === item.href ? "text-white" : "text-gray-400 group-hover:text-white"}`} />
-                <span className={`relative z-10 transition-colors duration-300 ${activeSection === item.href ? "text-slate-900 dark:text-white" : "text-gray-500 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-white"}`}>
-                  {item.name}
-                </span>
-                {activeSection === item.href && (
-                  <motion.div
-                    layoutId="active-indicator"
-                    className="absolute -bottom-2 left-0 right-0 h-[2px] bg-white rounded-full"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                  />
-                )}
-              </button>
-            )})}
+                <button
+                  key={item.href}
+                  onClick={() => handleNavClick(item.href)}
+                  className="relative text-sm font-medium transition-colors duration-300 group flex items-center gap-2"
+                >
+                  <Icon className={`relative z-10 w-4 h-4 transition-colors duration-300 ${activeSection === item.href ? "text-white" : "text-gray-400 group-hover:text-white"}`} />
+                  <span className={`relative z-10 transition-colors duration-300 ${activeSection === item.href ? "text-slate-900 dark:text-white" : "text-gray-500 dark:text-gray-400 group-hover:text-slate-900 dark:group-hover:text-white"}`}>
+                    {item.name}
+                  </span>
+                  {activeSection === item.href && (
+                    <motion.div
+                      layoutId="active-indicator"
+                      className="absolute -bottom-2 left-0 right-0 h-[2px] bg-white rounded-full"
+                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    />
+                  )}
+                </button>
+              )
+            })}
           </div>
 
           {/* Actions: CV and Hamburger */}
@@ -166,29 +166,30 @@ const Navbar = () => {
               {navLinks.map((item, i) => {
                 const Icon = item.icon;
                 return (
-                <motion.div
-                  custom={i}
-                  variants={linkVariants}
-                  initial="closed"
-                  animate="open"
-                  exit="closed"
-                  key={item.name}
-                  className="overflow-hidden"
-                >
-                  <button
-                    onClick={() => handleNavClick(item.href)}
-                    className="group flex items-center justify-between w-full text-left"
+                  <motion.div
+                    custom={i}
+                    variants={linkVariants}
+                    initial="closed"
+                    animate="open"
+                    exit="closed"
+                    key={item.name}
+                    className="overflow-hidden"
                   >
-                    <div className="flex items-center gap-4">
-                      <Icon className="w-8 h-8 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" />
-                      <span className="text-4xl md:text-5xl font-display font-light text-white group-hover:ml-4 transition-all duration-300">
-                        {item.name}
-                      </span>
-                    </div>
-                    <ArrowRight className="w-8 h-8 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-blue-500" />
-                  </button>
-                </motion.div>
-              )})}
+                    <button
+                      onClick={() => handleNavClick(item.href)}
+                      className="group flex items-center justify-between w-full text-left"
+                    >
+                      <div className="flex items-center gap-4">
+                        <Icon className="w-8 h-8 text-gray-400 group-hover:text-blue-500 transition-colors duration-300" />
+                        <span className="text-4xl md:text-5xl font-display font-light text-white group-hover:ml-4 transition-all duration-300">
+                          {item.name}
+                        </span>
+                      </div>
+                      <ArrowRight className="w-8 h-8 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-blue-500" />
+                    </button>
+                  </motion.div>
+                )
+              })}
 
               <motion.div
                 custom={navLinks.length}

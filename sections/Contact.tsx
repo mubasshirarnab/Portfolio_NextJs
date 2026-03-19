@@ -113,7 +113,7 @@ const channels = [
     id: "LI",
     label: "LinkedIn",
     handle: "mubasshir-ahmed-arnab",
-    href: "https://linkedin.com/in/mubasshir-ahmed-arnab",
+    href: "https://www.linkedin.com/in/mubasshir-ahmed263/",
     Icon: Linkedin,
     freq: "80.0 MHz",
     color: "#0A66C2",

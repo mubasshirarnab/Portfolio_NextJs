@@ -232,9 +232,9 @@ export default function OrbitingSkills() {
   ];
 
   return (
-    <div className="w-full relative h-[360px] sm:h-[450px] md:h-[600px] lg:h-[800px] flex items-center justify-center overflow-visible">
+    <div className="w-full relative h-[300px] sm:h-[380px] md:h-[500px] lg:h-[680px] flex items-center justify-center overflow-visible">
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] flex items-center justify-center scale-[0.45] sm:scale-[0.55] md:scale-75 lg:scale-100 origin-center transition-transform duration-500 z-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] flex items-center justify-center scale-[0.38] sm:scale-[0.47] md:scale-[0.65] lg:scale-[0.88] origin-center transition-transform duration-500 z-10"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >

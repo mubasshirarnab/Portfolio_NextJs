@@ -121,25 +121,25 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl mx-auto mt-8 md:mt-4 relative z-20 px-4 lg:px-12 pb-12">
           {categorizedSkills.map((category, idx) => {
             const CategoryIcon = category.icon;
-            
+
             return (
               <Reveal key={idx} delay={0.1 * idx} width="100%">
                 <div className="bg-[#111114]/90 backdrop-blur-xl border border-white/10 rounded-[24px] p-6 hover:border-white/20 transition-all duration-300 group hover:shadow-[0_8px_30px_rgba(0,0,0,0.5)] h-full flex flex-col relative overflow-hidden">
-                  
+
                   {/* Subtle ambient glow behind the card */}
                   <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-3xl pointer-events-none rounded-full`} />
 
                   {/* Category Header */}
                   <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/5 relative z-10">
-                     {/* Subtle underline animated gradient */}
-                     <div className={`absolute bottom-[-1px] left-0 h-[1.5px] w-0 bg-gradient-to-r ${category.gradient} group-hover:w-full transition-all duration-700 rounded-full`} />
-                     
-                     <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                        <CategoryIcon className="w-6 h-6 text-white/90 group-hover:text-white transition-colors" />
-                     </div>
-                     <h3 className={`text-xl font-display font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r ${category.gradient}`}>
-                       {category.title}
-                     </h3>
+                    {/* Subtle underline animated gradient */}
+                    <div className={`absolute bottom-[-1px] left-0 h-[1.5px] w-0 bg-gradient-to-r ${category.gradient} group-hover:w-full transition-all duration-700 rounded-full`} />
+
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                      <CategoryIcon className="w-6 h-6 text-white/90 group-hover:text-white transition-colors" />
+                    </div>
+                    <h3 className={`text-xl font-display font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r ${category.gradient}`}>
+                      {category.title}
+                    </h3>
                   </div>
 
                   {/* Skills List in 2 columns */}
@@ -149,7 +149,7 @@ const Skills = () => {
                       return (
                         <div key={sIdx} className="flex items-center gap-3 group/skill cursor-default">
                           <div className="w-10 h-10 rounded-xl bg-dark-black/50 flex items-center justify-center border border-white/5 group-hover/skill:border-white/20 transition-all duration-300 group-hover/skill:shadow-[0_0_15px_rgba(255,255,255,0.05)] shrink-0">
-                             <SkillIcon className="w-5 h-5 opacity-70 group-hover/skill:opacity-100 transition-all duration-300 group-hover/skill:scale-110 drop-shadow-sm" style={{ color: skill.color }} />
+                            <SkillIcon className="w-5 h-5 opacity-70 group-hover/skill:opacity-100 transition-all duration-300 group-hover/skill:scale-110 drop-shadow-sm" style={{ color: skill.color }} />
                           </div>
                           <span className="text-sm md:text-base font-medium text-light-grey/80 group-hover/skill:text-white transition-colors duration-300 tracking-wide truncate">
                             {skill.name}

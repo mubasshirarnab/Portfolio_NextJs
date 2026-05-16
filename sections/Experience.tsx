@@ -9,7 +9,7 @@ import { Briefcase, Users, Code, Activity, Crown } from "lucide-react";
 
 const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -49,19 +49,19 @@ const Experience = () => {
 
   return (
     <ScrollSection id="experience" className="py-20 md:py-32 relative bg-dark-black z-10 border-t border-white/5 overflow-hidden">
-      
+
       {/* Background Lighting */}
       <div className="absolute top-1/2 left-0 w-full h-[500px] bg-gradient-to-r from-bright-aqua/5 via-neon-purple/5 to-transparent blur-[150px] pointer-events-none -translate-y-1/2" />
-      
+
       <div className="container mx-auto px-6 lg:px-12 relative z-10" ref={containerRef}>
-        
+
         <div className="flex flex-col items-center mb-12 md:mb-24 text-center">
           <Reveal>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-2 tracking-tight">
               Professional <span className="gradient-text">Experiences</span>
             </h2>
           </Reveal>
-          
+
           <Reveal delay={0.2}>
             <div className="w-24 h-1 bg-gradient-to-r from-neon-purple to-bright-aqua mx-auto mt-6 mb-6 rounded-full shadow-[0_0_15px_rgba(45,212,191,0.5)]" />
           </Reveal>
@@ -75,16 +75,16 @@ const Experience = () => {
 
         {/* Cinematic Path Timeline */}
         <div className="relative max-w-5xl mx-auto">
-          
+
           {/* Animated SVG Path for the Timeline */}
           <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-2 hidden md:block z-0">
             <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 8 1000" fill="none">
               <path d="M 4 0 L 4 1000" stroke="rgba(255,255,255,0.1)" strokeWidth="2" strokeDasharray="8 8" />
-              <motion.path 
-                d="M 4 0 L 4 1000" 
-                stroke="url(#experience-gradient)" 
-                strokeWidth="4" 
-                style={{ pathLength }} 
+              <motion.path
+                d="M 4 0 L 4 1000"
+                stroke="url(#experience-gradient)"
+                strokeWidth="4"
+                style={{ pathLength }}
                 className="drop-shadow-[0_0_8px_rgba(139,92,246,0.6)]"
               />
               <defs>
@@ -120,7 +120,7 @@ const Experience = () => {
                   <div className="glass-panel w-full p-6 md:p-8 rounded-[18px] transition-all duration-500 group relative overflow-hidden text-left bg-dark-surface">
                     {/* Subtle hover glow inside card */}
                     <div className={`absolute -inset-2 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-700 pointer-events-none`} />
-                    
+
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
                       <div>
                         <h3 className="text-xl md:text-2xl font-display font-bold text-white tracking-tight mb-1">
@@ -131,7 +131,7 @@ const Experience = () => {
                           <span className="text-base text-light-grey/90 font-medium">{item.organization}</span>
                         </div>
                       </div>
-                      
+
                       <div className="shrink-0 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-bright-aqua/90 text-xs tracking-widest font-display uppercase self-start md:self-auto shadow-inner">
                         {item.duration}
                       </div>

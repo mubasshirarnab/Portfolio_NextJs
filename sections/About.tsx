@@ -31,7 +31,7 @@ const About = () => {
             viewport={{ once: true }}
             className="col-span-1 md:col-span-1 md:row-span-2 relative rounded-[24px] md:rounded-[32px] overflow-hidden bg-dark-surface border border-slate-200 dark:border-white/10 min-h-[280px] md:min-h-0"
           >
-            <motion.div 
+            <motion.div
               className="absolute inset-0 z-10 bg-gradient-to-t from-dark-black/90 via-dark-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-70 pointer-events-none"
             />
             <Image
@@ -40,7 +40,7 @@ const About = () => {
               fill
               className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
             />
-            <div 
+            <div
               className="absolute bottom-0 left-0 p-8 z-20 w-full transform transition-all duration-500 group-hover:-translate-y-4"
               style={{ transform: "translateZ(50px)" }}
             >
@@ -59,8 +59,8 @@ const About = () => {
           >
             {/* Spotlight Hover Effect */}
             <div className="absolute -inset-full w-[300%] h-[300%] bg-gradient-to-tr from-neon-purple/20 to-bright-aqua/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rotate-12 blur-[80px] pointer-events-none" />
-            
-            <div 
+
+            <div
               className="relative z-10 flex items-center gap-3 mb-4 transform transition-transform duration-500 group-hover:translate-x-2"
               style={{ transform: "translateZ(30px)" }}
             >
@@ -69,7 +69,7 @@ const About = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white group-hover:text-neon-purple transition-colors duration-300">The Philosophy</h3>
             </div>
-            <p 
+            <p
               className="relative z-10 text-slate-600 dark:text-light-grey/60 text-base md:text-sm lg:text-base font-light leading-relaxed group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300"
               style={{ transform: "translateZ(40px)" }}
             >
@@ -87,8 +87,8 @@ const About = () => {
           >
             {/* Floating Pulse Rings */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-500/10 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse-slow pointer-events-none" />
-            
-            <motion.div 
+
+            <motion.div
               className="relative w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mb-4 transition-transform duration-500 group-hover:-translate-y-2"
               style={{ transform: "translateZ(40px)" }}
               whileHover={{ scale: 1.15, rotate: 10 }}
@@ -97,13 +97,13 @@ const About = () => {
               <MapPin className="w-6 h-6 text-red-500 group-hover:text-red-400 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)] transition-colors duration-300" />
               <div className="absolute inset-0 rounded-full border border-red-500/30 group-hover:animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]" />
             </motion.div>
-            <h4 
+            <h4
               className="text-lg font-display font-bold text-slate-900 dark:text-white group-hover:text-red-400 transition-colors duration-300"
               style={{ transform: "translateZ(30px)" }}
             >
               Dhaka, Bangladesh
             </h4>
-            <p 
+            <p
               className="text-xs uppercase tracking-widest text-slate-400 mt-2 font-medium"
               style={{ transform: "translateZ(20px)" }}
             >Location</p>
@@ -118,8 +118,8 @@ const About = () => {
             className="col-span-1 md:col-span-1 md:row-span-2 rounded-[24px] md:rounded-[32px] bg-slate-900 dark:bg-dark-surface border border-slate-200 dark:border-white/5 p-6 md:p-8 flex flex-col transition-colors relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-48 h-48 bg-bright-aqua/10 blur-[60px] rounded-full group-hover:bg-bright-aqua/30 transition-colors duration-500 pointer-events-none" />
-            
-            <h3 
+
+            <h3
               className="text-xl md:text-2xl font-display font-bold text-white mb-6 relative z-10 group-hover:text-bright-aqua transition-colors duration-300 drop-shadow-md"
               style={{ transform: "translateZ(40px)" }}
             >Core Capabilities</h3>
@@ -130,8 +130,8 @@ const About = () => {
                 { icon: <Layers className="w-4 h-4" />, title: "System Architecture", color: "text-slate-400", bg: "hover:bg-slate-500/10", border: "hover:border-slate-500/50 hover:shadow-[0_0_20px_rgba(148,163,184,0.2)]" },
                 { icon: <LayoutTemplate className="w-4 h-4" />, title: "UI/UX Alignment", color: "text-rose-400", bg: "hover:bg-rose-500/10", border: "hover:border-rose-500/50 hover:shadow-[0_0_20px_rgba(251,113,133,0.2)]" }
               ].map((item, idx) => (
-                <motion.div 
-                  key={idx} 
+                <motion.div
+                  key={idx}
                   whileHover={{ x: 8, scale: 1.03 }}
                   className={`flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/5 transition-all duration-300 cursor-pointer ${item.bg} ${item.border} group/item`}
                 >
@@ -154,7 +154,7 @@ const About = () => {
             <div className="absolute inset-0 w-full h-full border-2 border-transparent group-hover:border-bright-aqua/50 rounded-[32px] transition-colors duration-500 group-hover:shadow-[inset_0_0_20px_rgba(0,240,255,0.15)] pointer-events-none" />
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-r from-transparent via-bright-aqua/10 to-transparent -translate-x-[150%] group-hover:translate-x-[50%] transition-transform duration-[2s] ease-in-out rotate-45 pointer-events-none" />
 
-            <div 
+            <div
               className="w-16 h-16 rounded-2xl bg-bright-aqua/10 flex items-center justify-center shrink-0 group-hover:bg-bright-aqua/20 transition-all duration-300 group-hover:shadow-[0_0_25px_rgba(0,240,255,0.3)] z-10"
               style={{ transform: "translateZ(30px)" }}
             >
@@ -163,7 +163,7 @@ const About = () => {
             <div className="relative z-10" style={{ transform: "translateZ(40px)" }}>
               <h3 className="text-xl md:text-2xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-bright-aqua transition-all duration-500">Computer Science & Engineering</h3>
               <p className="text-slate-600 dark:text-light-grey/80 text-sm mb-3">United International University</p>
-              <motion.span 
+              <motion.span
                 className="inline-block px-3 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg text-xs font-medium text-slate-500 dark:text-white/60 group-hover:border-bright-aqua/50 group-hover:text-bright-aqua group-hover:bg-bright-aqua/10 group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300"
               >
                 BSc in CSE

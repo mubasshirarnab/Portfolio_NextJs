@@ -99,8 +99,8 @@ const Projects = () => {
                 key={project.id}
                 onClick={() => setActiveProject(project.id)}
                 className={`group relative text-left p-4 md:p-6 rounded-2xl transition-all duration-500 overflow-hidden ${activeProject === project.id
-                    ? "bg-white dark:bg-dark-surface shadow-[0_8px_30px_rgba(0,0,0,0.1)] dark:shadow-none border border-slate-200 dark:border-white/10"
-                    : "bg-transparent border border-transparent hover:border-slate-200 hover:bg-white/50 dark:hover:border-white/5 dark:hover:bg-white/5"
+                  ? "bg-white dark:bg-dark-surface shadow-[0_8px_30px_rgba(0,0,0,0.1)] dark:shadow-none border border-slate-200 dark:border-white/10"
+                  : "bg-transparent border border-transparent hover:border-slate-200 hover:bg-white/50 dark:hover:border-white/5 dark:hover:bg-white/5"
                   }`}
               >
                 {/* Active Indicator Line */}
@@ -113,8 +113,8 @@ const Projects = () => {
 
                 <div className="flex items-center gap-4 relative z-10">
                   <div className={`p-3 rounded-xl transition-colors duration-500 ${activeProject === project.id
-                      ? "bg-slate-100 dark:bg-white/10 text-slate-900 dark:text-white"
-                      : "bg-slate-100/50 dark:bg-white/5 text-slate-500 dark:text-white/50 group-hover:text-slate-700 dark:group-hover:text-white/80"
+                    ? "bg-slate-100 dark:bg-white/10 text-slate-900 dark:text-white"
+                    : "bg-slate-100/50 dark:bg-white/5 text-slate-500 dark:text-white/50 group-hover:text-slate-700 dark:group-hover:text-white/80"
                     }`}>
                     {project.icon}
                   </div>
